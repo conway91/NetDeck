@@ -1,8 +1,6 @@
 language: csharp
-solution: NetDeck.sln
-install:
-  - nuget restore NetDeck.sln
-  - nuget install NUnit.Runners -Version 3.7.0 -OutputDirectory testrunner
+mono: none
+dotnet: 1.0.3
+dist: trusty
 script:
-  - xbuild /p:Configuration=Release NetDeck.sln
-  - mono ./testrunner/NUnit.Runners.3.7.0/tools/nunit-console.exe ./NetDeck.TestProject/bin/Release/NetDeck.TestProject.dll
+ - dotnet restore
