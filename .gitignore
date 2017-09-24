@@ -1,0 +1,6 @@
+NetDeck/bin
+NetDeck/obj
+NetDeck.TestProject/bin
+NetDeck.TestProject/obj
+.vs/
+packages
