@@ -1,8 +1,8 @@
 language: csharp
-solution: CronEspresso.sln
+solution: NetDeck.sln
 install:
-  - nuget restore CronEspresso.sln
-  - nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner
+  - nuget restore NetDeck.sln
+  - nuget install NUnit.Runners -Version 3.7.0 -OutputDirectory testrunner
 script:
-  - xbuild /p:Configuration=Release CronEspresso.sln
-  - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./CronEspresso.Test/bin/Release/CronEspresso.Test.dll
+  - xbuild /p:Configuration=Release NetDeck.sln
+  - mono ./testrunner/NUnit.Runners.3.7.0/tools/nunit-console.exe ./NetDeck.TestProject/bin/Release/NetDeck.TestProject.dll
